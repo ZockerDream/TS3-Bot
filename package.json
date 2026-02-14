@@ -1,0 +1,24 @@
+{
+  "name": "ts3-music-bot",
+  "version": "1.0.0",
+  "description": "TeamSpeak 3 Music Bot with YouTube and Spotify support",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": ["teamspeak", "ts3", "music", "bot", "youtube", "spotify"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ts3-nodejs-library": "^3.4.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "@distube/ytdl-core": "^4.13.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "spotify-url-info": "^3.2.12",
+    "youtube-sr": "^4.3.4",
+    "dotenv": "^16.3.1"
+  }
+}

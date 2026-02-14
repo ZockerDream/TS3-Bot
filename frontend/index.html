@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TeamSpeak 3 Music Bot - Control your music bot with a modern web interface">
+  <title>TS3 Music Bot 🎵</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="logo">🎵 TS3 Music Bot</h1>
+        <div class="bot-status">
+          <div class="status-indicator" id="statusIndicator"></div>
+          <span id="statusText">Connecting...</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Control Panel -->
+      <section class="control-panel">
+        <h2>Add Music</h2>
+        <div class="url-input-group">
+          <input 
+            type="text" 
+            id="urlInput" 
+            class="url-input" 
+            placeholder="Paste YouTube or Spotify URL..."
+            autocomplete="off"
+          >
+          <button id="addButton" class="btn btn-primary">
+            <span class="btn-icon">➕</span>
+            Add to Queue
+          </button>
+        </div>
+        <p class="hint">Supports YouTube and Spotify links</p>
+      </section>
+
+      <!-- Now Playing -->
+      <section class="now-playing" id="nowPlayingSection">
+        <h2>Now Playing</h2>
+        <div class="song-card" id="currentSong">
+          <div class="song-placeholder">
+            <span class="placeholder-icon">🎵</span>
+            <p>No song playing</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Playback Controls -->
+      <section class="playback-controls">
+        <div class="controls-row">
+          <button id="pauseBtn" class="btn btn-control" title="Pause">
+            <span class="btn-icon">⏸️</span>
+          </button>
+          <button id="resumeBtn" class="btn btn-control" title="Resume">
+            <span class="btn-icon">▶️</span>
+          </button>
+          <button id="skipBtn" class="btn btn-control" title="Skip">
+            <span class="btn-icon">⏭️</span>
+          </button>
+          <button id="stopBtn" class="btn btn-control btn-danger" title="Stop">
+            <span class="btn-icon">⏹️</span>
+          </button>
+        </div>
+
+        <div class="volume-control">
+          <span class="volume-icon">🔊</span>
+          <input 
+            type="range" 
+            id="volumeSlider" 
+            class="volume-slider" 
+            min="0" 
+            max="100" 
+            value="50"
+          >
+          <span id="volumeValue" class="volume-value">50%</span>
+        </div>
+      </section>
+
+      <!-- Channel Selection -->
+      <section class="channel-section">
+        <h2>Channel</h2>
+        <div class="channel-select-group">
+          <select id="channelSelect" class="channel-select">
+            <option value="">Loading channels...</option>
+          </select>
+          <button id="joinChannelBtn" class="btn btn-secondary">
+            <span class="btn-icon">🔊</span>
+            Join Channel
+          </button>
+        </div>
+        <p class="current-channel">
+          Current: <span id="currentChannel">-</span>
+        </p>
+      </section>
+
+      <!-- Queue -->
+      <section class="queue-section">
+        <div class="queue-header">
+          <h2>Queue (<span id="queueCount">0</span>)</h2>
+          <button id="clearQueueBtn" class="btn btn-small btn-danger">Clear Queue</button>
+        </div>
+        <div class="queue-list" id="queueList">
+          <div class="queue-empty">
+            <span class="empty-icon">📋</span>
+            <p>Queue is empty</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with 💜 for TeamSpeak</p>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
