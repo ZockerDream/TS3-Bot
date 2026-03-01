@@ -1,6 +1,6 @@
 # 🎵 TeamSpeak 3 Music Bot
 
-A powerful music bot for TeamSpeak 3 that plays music from YouTube and Spotify URLs, controlled through a modern web interface.-.
+A powerful music bot for TeamSpeak 3 that plays music from YouTube and Spotify URLs, controlled through a modern web interface.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg)
@@ -262,4 +262,5 @@ Built with:
 ---
 
 Made with 💜 for the TeamSpeak community
+
 
